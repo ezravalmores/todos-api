@@ -8,6 +8,12 @@ class TodosController < ApplicationController
     json_response(@todos)
   end
 
+  # GET /todos/get_completed
+  def get_completed
+    @todos = Todo.completed.order("id ASC")
+    json_response(@todos)
+  end
+
   # POST /todos
   def create
     @todo = Todo.create!(todo_params)
