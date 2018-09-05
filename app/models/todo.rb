@@ -1,3 +1,3 @@
 class Todo < ApplicationRecord
-  scope :proponent, -> { where(completed: true) }
+  scope :completed, -> { where(completed: true) }
 end

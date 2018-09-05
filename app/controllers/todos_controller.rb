@@ -9,7 +9,7 @@ class TodosController < ApplicationController
   end
 
   # GET /todos/get_completed
-  def get_completed
+  def completed
     @todos = Todo.completed.order("id ASC")
     json_response(@todos)
   end
