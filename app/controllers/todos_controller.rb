@@ -4,7 +4,7 @@ class TodosController < ApplicationController
 
   # GET /todos
   def index
-    @todos = Todo.all
+    @todos = Todo.all.order("id ASC")
     json_response(@todos)
   end
 
